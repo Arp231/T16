@@ -41,8 +41,6 @@ Laptop3.pVelocidad="1.7 GHz";
 Laptop3.memoria="2GB";
 Laptop3.mTipo="DDR3";
 Laptop3.capacidad="64GB SSD";
-  var lap=1;
-
 
 $(document).ready(function(){
 
@@ -53,9 +51,10 @@ $(document).ready(function(){
    });
 
    $('#next').on('click',function(){
+     var cMr = $("#marca").text();
 
-     if (lap==1){
-        lap=2;
+     if (cMr==='Apple'){
+
         $("#descipcion").text(Laptop2.descipcion);
         $("#precio").text(Laptop2.precio);
         $("#marca").text(Laptop2.marca);
@@ -69,11 +68,9 @@ $(document).ready(function(){
         $("#mTipo").text(Laptop2.mTipo);
         $("#capacidad").text(Laptop2.capacidad);
         $("#laptopImage").attr("src","img/2.png");
-
      }
 
-     if (lap==2){
-
+     if (cMr==='Generica'){
         $("#descipcion").text(Laptop3.descipcion);
         $("#precio").text(Laptop3.precio);
         $("#marca").text(Laptop3.marca);
@@ -87,11 +84,10 @@ $(document).ready(function(){
         $("#mTipo").text(Laptop3.mTipo);
         $("#capacidad").text(Laptop3.capacidad);
         $("#laptopImage").attr("src","img/3.png");
-        lap=3;
+
      }
 
-     if (lap==3){
-
+     if (cMr==='Lenovo'){
         $("#descipcion").text(Laptop1.descipcion);
         $("#precio").text(Laptop1.precio);
         $("#marca").text(Laptop1.marca);
@@ -105,14 +101,16 @@ $(document).ready(function(){
         $("#mTipo").text(Laptop1.mTipo);
         $("#capacidad").text(Laptop1.capacidad);
         $("#laptopImage").attr("src","img/1.png");
-        lap=1;
+
      }
 
    });
 
 
    $('#back').on('click',function(){
-     if (lap==1){
+     var cMr = $("#marca").text();
+
+     if (cMr==='Apple'){
 
         $("#descipcion").text(Laptop3.descipcion);
         $("#precio").text(Laptop3.precio);
@@ -127,11 +125,10 @@ $(document).ready(function(){
         $("#mTipo").text(Laptop3.mTipo);
         $("#capacidad").text(Laptop3.capacidad);
         $("#laptopImage").attr("src","img/3.png");
-                lap=3;
+
      }
 
-     if (lap==2){
-
+     if (cMr=='Generica'){
         $("#descipcion").text(Laptop1.descipcion);
         $("#precio").text(Laptop1.precio);
         $("#marca").text(Laptop1.marca);
@@ -145,10 +142,9 @@ $(document).ready(function(){
         $("#mTipo").text(Laptop1.mTipo);
         $("#capacidad").text(Laptop1.capacidad);
         $("#laptopImage").attr("src","img/1.png");
-                lap=1;
      }
 
-     if (lap==3){
+     if (cMr==='Lenovo'){
 
         $("#descipcion").text(Laptop2.descipcion);
         $("#precio").text(Laptop2.precio);
@@ -163,7 +159,6 @@ $(document).ready(function(){
         $("#mTipo").text(Laptop2.mTipo);
         $("#capacidad").text(Laptop2.capacidad);
         $("#laptopImage").attr("src","img/2.png");
-                lap=2;
      }
 
    });
