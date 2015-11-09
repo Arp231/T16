@@ -23,6 +23,48 @@ h1 {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbffe5', endColorstr='#d6362b', GradientType=0 );
 }
 
+.content {
+  padding-top: 50px;
+  width: 90%;
+  display: inline-block;
+  margin-left: 5%;
+  background: #d6362b;
+  padding-bottom: 100px;
+}
+
+
+table {
+  margin: auto;
+
+  font-family: "Lucida Sans Unicode", Sans-Serif;
+  font-size: 18px;
+
+  width: 480px;
+  text-align: left;
+  border-collapse: collapse;
+ }
+
+ thead{
+   font-size: 28px;
+   color: #ffffff;
+   font-family: 'Roboto', sans-serif;
+ }
+
+
+td {
+  padding: 8px;
+  background: #ffffff;
+  border-bottom: 1px solid #000000;
+  color: #888888;
+  border-top: 1px solid transparent;
+}
+
+tr:hover td
+{
+  background: #757575;
+  color: #fafafa;
+a }
+
 .promo {
   width: 50%;
   display: inline-block;
@@ -87,9 +129,4 @@ h2{
   text-align: center;
   color:#f9f9f9;
   font-size: 32px;
-}
-
-.precio{
-  text-align: right;
-  display: inline-block;
 }
